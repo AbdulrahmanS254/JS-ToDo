@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/pen.png" type="image/png">
+    <link rel="shortcut icon" href="./images/pen.png" type="image/png">
     <title>To Do List</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <h1>To-Do list</h1>
-        </div>
+        <h1 class="title"><img src="./images/check.png" alt="check icon">To-Do list</h1>
     </header>
+    <main>
+        <div class="container">
+            <form id="add-form" action="">
+                <input type="text" name="task-info" id="input-box" placeholder="Add Your Task">
+                <button type="submit" id="add-btn" class="task-btn">Add</button>
+            </form>
+            <ul id="task-container" class="task-container">
+                <!-- <li>TAsk</li>
+                <li class="checked">TAsk</li>
+                <li>TAsk</li> -->
+            </ul>
+        </div>
+    </main>
 </body>
+
 </html>

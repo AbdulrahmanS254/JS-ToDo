@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #232526, #414345);
+    font-family: "Krub";
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+}
+
+.title {
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title img {
+    max-width: 55px;
+}
+
+.container {
+    background: #262626;
+    max-width: 540px;
+    margin: 50px auto;
+    border-radius: 15px;
+    padding: 40px 30px 70px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+form input {
+    padding: 12px 15px;
+    border: 1px solid #8c8c8cb7;
+    border-right: 0;
+    background-color: transparent;
+    font-size: 18px;
+    width: 80%;
+    color: #BFBFBF;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+form input::placeholder {
+    color: #8C8C8C;
+}
+
+form input:focus {
+    outline: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.wrong-input {
+    color: #ff001595;
+    animation: shake 0.5s ease-in-out;
+}
+
+.wrong-input::placeholder {
+    color: #ff001595;
+}
+
+form .task-btn {
+    width: 20%;
+    background-color: transparent;
+    padding: 12px 20px;
+    border: 1px solid #009e3f;
+    color: #009e3f;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+form .task-btn:hover {
+    border-color: #bfbfbf;
+    color: #BFBFBF;
+}
+
+.task-container {
+    list-style: none;
+    color: #BFBFBF;
+    text-align: left;
+}
+
+.task-container li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-container li::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-image: url('./images/checked.svg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.task-container li.checked {
+    text-decoration: line-through;
+}
+
+.task-container li.checked::before {
+    background-image: url("./images/check-done.svg");
+}
