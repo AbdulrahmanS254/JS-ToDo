@@ -34,6 +34,7 @@ header {
     margin: 50px auto;
     border-radius: 15px;
     padding: 40px 30px 70px;
+    transition: all 0.3s;
 }
 
 form {
@@ -148,4 +149,23 @@ form .task-btn:hover {
 
 .task-container li.checked::before {
     background-image: url("./images/check-done.svg");
+}
+
+.task-container li span {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #D20000;
+}
+
+.task-container li span:hover {
+    background-color: #414345;
 }
